@@ -1,0 +1,415 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.fixed {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+}
+
+/* Estilos menu navegacion */
+.main_header {
+    display: grid;
+    width: 100vw;
+    height: 55px;
+    position: fixed;
+    grid-template-columns: 200px auto;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(240, 248, 255, 0.341);
+}
+
+.main_header_nav {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: end;
+    gap: 0 20px;
+    text-align: center;
+}
+
+.main_header_nav a {
+    /* outline: 1px solid rgb(0, 0, 0); */
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.main_header_nav a:hover {
+    background-color: black;
+    border-radius: 15px;
+    color: white;
+}
+
+
+/* Estilos contenido principal index */
+
+.main_principal_parallax {
+    background-image: url(../Imagenes/imagenContPrinc.png);
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main_principal_textbackground {
+    position: relative;
+    color: rgba(255, 255, 255, 0.108);
+    font-size: 230px;
+    display: inline;
+    position: absolute;
+    margin-top: 453px;
+    font-weight: bolder;
+}
+
+.main_principal_wrapper h1 {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    padding-top: 154px;
+    padding-left: 20px;
+}
+
+.main_principal_wrapper_paragrap {
+    font: bold;
+    color: rgb(255, 255, 255);
+    font-size: 80px;
+    margin-top: 154 px;
+    margin-left: 20px;
+}
+
+.main_principal_wrapper-cta {
+    display: block;
+}
+
+.main_principal_wrapper-cta a {
+    /* outline: 1px solid rgb(255, 0, 0); */
+    font-size: 13px;
+    padding-top: 13px;
+    font-weight: 500;
+    display: inline-block;
+    width: 15%;
+    height: 30px;
+    text-align: center;
+    color: white;
+    background-color: rgb(255, 43, 67);
+    border-radius: 45px;
+    margin-left: 70px;
+    margin-top: 25px;
+}
+
+.main_principal_wrapper-cta a:hover {
+    color: black;
+    background-color: rgb(255, 8, 37);
+}
+
+/* Estilos acerca de nosotros */
+
+.nosotros {
+
+    width: 100%;
+    position: static;
+}
+
+.nosotros_wrapper_escuela {
+    width: 100%;
+    display: inline-block;
+    padding-bottom: 40px;
+}
+
+.nosotros_title {
+    font-size: 70px;
+    text-align: center;
+    color: rgba(21, 16, 111, 0.499);
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.nosotros_subtitle_escuela {
+    font-size: 40px;
+    font-weight: 300;
+    position: relative;
+    margin-left: 760px;
+    margin-bottom: 20px;
+    display:inline;
+    color:  rgba(21, 16, 111, 0.499);
+    
+}
+
+.nosotros_paragraph_escuela {
+    /* outline: 1px solid red; */
+    font-size: 20px;
+    width: 40%;
+    text-align: justify;
+    font-weight: 300;
+    display: inline-block;
+    position: relative;
+    padding-left: 40px;
+    padding-right: 10px;
+    margin-top: 40px;
+}
+
+.img_schooltwo {
+    width: 500px;
+    height: 300px;
+    float:left;
+    margin-left: 84px;
+    padding-right: 10%;
+    
+}
+
+.nosotros_wrapper_instalaciones{
+    /* outline: 1px solid red; */
+    padding-bottom: 40px;
+}
+
+.nosotros_subtitle_instalaciones {
+    font-size: 40px;
+    font-weight: 300;
+    position: relative;
+    padding-left: 81px;
+    margin-bottom: 20px;
+    display: block;
+    color:  rgba(21, 16, 111, 0.499);
+}
+
+.nosotros_paragraph_instalaciones {
+    /* outline: 1px solid red; */
+    font-size: 20px;
+    width: 40%;
+    text-align: justify;
+    font-weight: 300;
+    display: inline-block;
+    position: relative;
+    padding-left: 81px;
+    padding-right: 10px;
+    margin-top: 40px;
+}
+
+.img_instalaciones{
+    /* outline: 1px solid red; */
+    height: 270px;
+    width: 470px;
+    position: absolute;
+    margin-left: 151px;
+    display: inline-block;
+    margin-top: -68px;
+}
+
+/* Inicio estilo seccion saltos */
+.salto_parallax{
+        background-image: url(../imagenes/saltosparallax.jpg);
+        height: 400px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
+.salto_parallax_title{
+    font-size: 100px;
+    text-align: left;
+    color: rgba(21, 16, 111, 0.499);
+    padding-bottom: 30px; 
+    margin-left: 35px;
+    padding-top: 45px;
+    width: 50%;
+}
+
+.salto_wrapper_paragraph{
+    background-color: rgba(100, 148, 237, 0.34);
+    text-align: 20px;
+    font-weight: 100;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+   
+}
+
+.salto_wrapper_paragraph {
+    padding: 47px 60px;
+    
+}
+
+.salto_wrapper_cta{
+    display: block;
+    text-decoration: none
+}
+
+.salto_wrapper_cta a{
+    font-size: 13px;
+    padding-top: 13px;
+    font-weight: 500;
+    display: inline-block;
+    width: 15%;
+    height: 30px;
+    text-align: center;
+    color: white;
+    background-color: rgb(255, 43, 67);
+    border-radius: 45px;
+    margin-left: 70px;
+    margin-top: 25px;
+}
+
+.salto_wrapper_cta a:hover{
+    color:  rgb(255, 43, 67);
+    background-color: white;
+
+}
+/* inicia estilo seccion curso */
+
+.section_curso{
+    margin-bottom:89px ;
+}
+.curso_parallax{
+    background-image: url(../imagenes/saltosseccion.jpeg);
+    height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.curso_parallax_title{
+    font-size: 100px;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.541);
+    padding-bottom: 30px; 
+    margin-left: 35px;
+    padding-top: 45px;
+    width: 50%;
+}
+
+.curso_wrapper_paragraph{
+    background-color: rgba(100, 148, 237, 0.34);
+    text-align: 20px;
+    font-weight: 100;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+   
+}
+
+.curso_wrapper_paragraph {
+    padding: 47px 60px;
+    
+}
+
+.curso_wrapper_cta{
+    display: block;
+    text-decoration: none
+}
+
+.curso_wrapper_cta a{
+    font-size: 13px;
+    padding-top: 13px;
+    font-weight: 500;
+    display: inline-block;
+    width: 15%;
+    height: 30px;
+    text-align: center;
+    color: white;
+    background-color: rgb(255, 43, 67);
+    border-radius: 45px;
+    margin-left: 70px;
+    margin-top: 25px;
+}
+
+.curso_wrapper_cta a:hover{
+    color:  rgb(255, 43, 67);
+    background-color: white;
+}
+
+/* Estilos videos */
+
+
+.videos{
+    background: white;
+    padding-bottom: 100px;
+}
+
+.videos h2{
+    font-size: 70px;
+    text-align: center;
+    color: rgba(21, 16, 111, 0.499);
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.left{
+    margin-left: 40px;
+
+}
+.center{
+    margin-left: 170px;
+}
+
+.rigth{
+    margin-left: 170px;
+}
+
+.video_wrapper_text_background{
+    color: rgba(43, 36, 36, 0.149);
+    font-size: 230px;
+    display: inline;
+    position: absolute;
+    font-weight: bolder;
+    display: block;
+    margin-left: 250px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+/* Inicio estilo footer */
+
+.footer{
+    display: block;
+    padding-top: 50px;
+    width: 100%;
+    font-size: 1,5rem;
+    font-weight: 300;
+}
+
+.footer_contact{
+display: inline-block;
+margin-left: 40px;
+width: 30%;
+margin-right: 184px;
+}
+
+
+.footer_redes{
+    display: inline-block;
+    margin-left: 600px;
+}
+
+.footer_face{
+    margin-left: 10px;
+}
+
+.footer_youtube{
+    margin-left: 10px;
+}
+
+.footer_face{
+    margin-left:10px;
+}
+
+/* fin estilo index */
