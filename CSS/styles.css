@@ -44,7 +44,6 @@ a {
 }
 
 .main_header_nav a {
-    /* outline: 1px solid rgb(0, 0, 0); */
     font-size: 1rem;
     font-weight: 500;
 }
@@ -84,7 +83,7 @@ a {
 }
 
 .main_principal_wrapper{
-    padding-left: 3%;
+    padding-left: 3%; 
 }
 .main_principal_wrapper h1 {
     color: rgb(255, 255, 255);
@@ -103,7 +102,6 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-
 }
 
 .main_principal_wrapper-cta a {
@@ -116,7 +114,7 @@ a {
     border-radius: 45px;
 }
 
-.main_principal_wrapper-cta a:hover {
+.main_principal_wrapper-cta a :hover{
     color: black;
     background-color: rgb(255, 8, 37);
 }
