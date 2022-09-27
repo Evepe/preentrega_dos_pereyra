@@ -21,10 +21,17 @@ a {
 
 .fixed {
     position: fixed;
-    bottom: 40px;
-    right: 40px;
+    bottom: 20px;
+    right: 20px;
 }
 
+
+@media (min-width:992px) {   
+    .fixed {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+    }
 /* Estilos menu navegacion */
 .main_header {
     display: grid;
@@ -46,7 +53,6 @@ a {
 }
 
 .main_header_nav a {
-    /* outline: 1px solid rgb(0, 0, 0); */
     font-size: 1rem;
     font-weight: 500;
 }
@@ -95,6 +101,7 @@ a {
     font: bold;
     color: rgb(255, 255, 255);
     font-size: 80px;
+    width: 80%;
 
 }
 
@@ -112,13 +119,11 @@ a {
     color: white;
     background-color: rgb(255, 43, 67);
     border-radius: 45px;
-
 }
 
 .main_principal_wrapper-cta a:hover {
     color: black;
     background-color: rgb(255, 8, 37);
-
 }
 
 /* Estilos acerca de nosotros */
@@ -161,12 +166,12 @@ a {
     font-size: 20px;
     text-align: justify;
     font-weight: 300;
-    width: 80%;
+    width: 100%;
 }
 
 .img_schooltwo {
-    width: 573px;
-    height: 470px;
+    width: 100%;
+    height: 100%;
     border-bottom-left-radius: 50px;
     border-top-right-radius: 50px;
     grid-column-start: 2;
@@ -201,8 +206,8 @@ a {
 }
 
 .img_instalaciones {
-    width: 573px;
-    height: 470px;
+    width: 100%;
+    height: 100%;
     border-bottom-right-radius: 50px;
     border-top-left-radius: 50px;
     grid-column-start: 1;
@@ -407,6 +412,8 @@ a {
 
 .footer_face {
     margin-left: 10px;
+}
 
-    /
-    /* fin estilo index */
+/* fin estilos footer */
+}
+
