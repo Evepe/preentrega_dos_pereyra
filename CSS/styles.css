@@ -4,9 +4,11 @@
     padding: 0;
 }
 
+
 html {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 
 ul,
 li {
@@ -19,10 +21,17 @@ a {
 
 .fixed {
     position: fixed;
-    bottom: 40px;
-    right: 40px;
+    bottom: 20px;
+    right: 20px;
 }
 
+
+@media (min-width:992px) {   
+    .fixed {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+    }
 /* Estilos menu navegacion */
 .main_header {
     display: grid;
@@ -32,7 +41,7 @@ a {
     grid-template-columns: 200px auto;
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(240, 248, 255, 0.341);
+    background-color: rgb(240, 248, 255);
 }
 
 .main_header_nav {
@@ -44,7 +53,6 @@ a {
 }
 
 .main_header_nav a {
-    /* outline: 1px solid rgb(0, 0, 0); */
     font-size: 1rem;
     font-weight: 500;
 }
@@ -53,11 +61,10 @@ a {
     background-color: black;
     border-radius: 15px;
     color: white;
+    padding: 5px 5px;
 }
 
-
-/* Estilos contenido principal index */
-
+/* Inicio estilos index */
 .main_principal_parallax {
     background-image: url(../Imagenes/imagenContPrinc.png);
     height: 100vh;
@@ -65,51 +72,53 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .main_principal_textbackground {
-    position: relative;
     color: rgba(255, 255, 255, 0.108);
     font-size: 230px;
-    display: inline;
     position: absolute;
-    margin-top: 453px;
+    bottom: -104px;
     font-weight: bolder;
+}
+
+.main_principal_wrapper {
+    padding-left: 3%;
 }
 
 .main_principal_wrapper h1 {
     color: rgb(255, 255, 255);
     font-size: 30px;
-    padding-top: 154px;
-    padding-left: 20px;
+
 }
 
 .main_principal_wrapper_paragrap {
     font: bold;
     color: rgb(255, 255, 255);
     font-size: 80px;
-    margin-top: 154 px;
-    margin-left: 20px;
+    width: 80%;
+
 }
 
 .main_principal_wrapper-cta {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .main_principal_wrapper-cta a {
-    /* outline: 1px solid rgb(255, 0, 0); */
     font-size: 13px;
-    padding-top: 13px;
+    padding: 15px 20px;
     font-weight: 500;
-    display: inline-block;
-    width: 15%;
-    height: 30px;
     text-align: center;
     color: white;
     background-color: rgb(255, 43, 67);
     border-radius: 45px;
-    margin-left: 70px;
-    margin-top: 25px;
 }
 
 .main_principal_wrapper-cta a:hover {
@@ -120,139 +129,141 @@ a {
 /* Estilos acerca de nosotros */
 
 .nosotros {
-
-    width: 100%;
-    position: static;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 25px;
 }
+
+.nosotros>h2 {
+    font-size: 70px;
+    color: rgba(21, 16, 111, 0.499);
+}
+
+
 
 .nosotros_wrapper_escuela {
-    width: 100%;
-    display: inline-block;
-    padding-bottom: 40px;
-}
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    justify-content: space-around;
+    align-items: center;
+    justify-items: center;
+    gap: 20px;
+    margin: 10px 10px 10px 40px;
 
-.nosotros_title {
-    font-size: 70px;
-    text-align: center;
-    color: rgba(21, 16, 111, 0.499);
-    position: relative;
-    margin-bottom: 30px;
 }
 
 .nosotros_subtitle_escuela {
     font-size: 40px;
     font-weight: 300;
-    position: relative;
-    margin-left: 760px;
-    margin-bottom: 20px;
-    display:inline;
-    color:  rgba(21, 16, 111, 0.499);
-    
+    color: rgba(21, 16, 111, 0.499);
 }
 
 .nosotros_paragraph_escuela {
-    /* outline: 1px solid red; */
     font-size: 20px;
-    width: 40%;
     text-align: justify;
     font-weight: 300;
-    display: inline-block;
-    position: relative;
-    padding-left: 40px;
-    padding-right: 10px;
-    margin-top: 40px;
+    width: 100%;
 }
 
 .img_schooltwo {
-    width: 500px;
-    height: 300px;
-    float:left;
-    margin-left: 84px;
-    padding-right: 10%;
-    
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
 }
 
-.nosotros_wrapper_instalaciones{
-    /* outline: 1px solid red; */
-    padding-bottom: 40px;
+.nosotros_wrapper_instalaciones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    justify-content: space-around;
+    align-items: center;
+    justify-items: center;
+    gap: 20px;
+    margin: 10px 10px 10px 40px;
 }
 
 .nosotros_subtitle_instalaciones {
     font-size: 40px;
     font-weight: 300;
-    position: relative;
-    padding-left: 81px;
-    margin-bottom: 20px;
-    display: block;
-    color:  rgba(21, 16, 111, 0.499);
+    color: rgba(21, 16, 111, 0.499);
 }
 
 .nosotros_paragraph_instalaciones {
-    /* outline: 1px solid red; */
     font-size: 20px;
-    width: 40%;
     text-align: justify;
     font-weight: 300;
-    display: inline-block;
-    position: relative;
-    padding-left: 81px;
-    padding-right: 10px;
-    margin-top: 40px;
+    width: 80%;
 }
 
-.img_instalaciones{
-    /* outline: 1px solid red; */
-    height: 270px;
-    width: 470px;
-    position: absolute;
-    margin-left: 151px;
-    display: inline-block;
-    margin-top: -68px;
+.img_instalaciones {
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
 }
 
 /* Inicio estilo seccion saltos */
-.salto_parallax{
-        background-image: url(../imagenes/saltosparallax.jpg);
-        height: 400px;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-
-.salto_parallax_title{
-    font-size: 100px;
-    text-align: left;
-    color: rgba(21, 16, 111, 0.499);
-    padding-bottom: 30px; 
-    margin-left: 35px;
-    padding-top: 45px;
-    width: 50%;
+.salto {
+    display: grid;
+    grid-template-areas:
+        "encabezado encabezado encabezado"
+        ". cont ."
+        "buttom . .";
+    gap: 15px;
 }
 
-.salto_wrapper_paragraph{
-    background-color: rgba(100, 148, 237, 0.34);
-    text-align: 20px;
-    font-weight: 100;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: 30px;
-    margin-bottom: 25px;
-   
+.salto_parallax {
+    background-image: url(../imagenes/saltosparallax.jpg);
+    height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 3% 50% 50%;
+    grid-template-rows: 3% 50% 50%;
+    align-items: center;
+    grid-area: encabezado;
+}
+
+.salto_parallax_title {
+    font-size: 6rem;
+
+    color: rgba(21, 16, 111, 0.499);
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
 }
 
 .salto_wrapper_paragraph {
+    background-color: rgba(100, 148, 237, 0.34);
+    font-weight: 100;
+    font-size: 1rem;
     padding: 47px 60px;
-    
+    grid-area: cont;
 }
 
-.salto_wrapper_cta{
-    display: block;
-    text-decoration: none
+.salto_wrapper_cta {
+    text-decoration: none;
+    grid-area: buttom;
 }
 
-.salto_wrapper_cta a{
+.salto_wrapper_cta a {
     font-size: 13px;
     padding-top: 13px;
     font-weight: 500;
@@ -267,62 +278,66 @@ a {
     margin-top: 25px;
 }
 
-.salto_wrapper_cta a:hover{
-    color:  rgb(255, 43, 67);
+.salto_wrapper_cta a:hover {
+    color: rgb(255, 43, 67);
     background-color: white;
 
 }
+
 /* inicia estilo seccion curso */
 
-.section_curso{
-    margin-bottom:89px ;
+
+.curso {
+    display: grid;
+    grid-template-areas:
+        "presentacion presentacion presentacion"
+        ". articulo ."
+        "boton . .";
+    gap: 15px;
 }
-.curso_parallax{
+
+.curso_parallax {
     background-image: url(../imagenes/saltosseccion.jpeg);
     height: 400px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: grid;
+    grid-template-columns: 3% 50% 50%;
+    grid-template-rows: 3% 50% 50%;
+    align-items: center;
+    grid-area: presentacion;
 }
 
-.curso_parallax_title{
-    font-size: 100px;
-    text-align: left;
+.curso_parallax_title {
+    font-size: 6em;
     color: rgba(255, 255, 255, 0.541);
-    padding-bottom: 30px; 
-    margin-left: 35px;
-    padding-top: 45px;
-    width: 50%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
 }
 
-.curso_wrapper_paragraph{
+.curso_wrapper {
     background-color: rgba(100, 148, 237, 0.34);
     text-align: 20px;
     font-weight: 100;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: 30px;
-    margin-bottom: 25px;
-   
-}
-
-.curso_wrapper_paragraph {
     padding: 47px 60px;
-    
+    grid-area: articulo;
 }
 
-.curso_wrapper_cta{
-    display: block;
-    text-decoration: none
+
+.curso_wrapper_cta {
+    text-decoration: none;
+    grid-area: boton;
 }
 
-.curso_wrapper_cta a{
+.curso_wrapper_cta a {
     font-size: 13px;
     padding-top: 13px;
     font-weight: 500;
-    display: inline-block;
-    width: 15%;
+    width: 20%;
     height: 30px;
     text-align: center;
     color: white;
@@ -332,84 +347,73 @@ a {
     margin-top: 25px;
 }
 
-.curso_wrapper_cta a:hover{
-    color:  rgb(255, 43, 67);
+.curso_wrapper_cta a:hover {
+    color: rgb(255, 43, 67);
     background-color: white;
 }
 
 /* Estilos videos */
 
 
-.videos{
-    background: white;
-    padding-bottom: 100px;
+.videos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-items: center;
+    gap: 20px;
 }
 
-.videos h2{
+.videos h2 {
     font-size: 70px;
-    text-align: center;
     color: rgba(21, 16, 111, 0.499);
-    position: relative;
-    margin-bottom: 20px;
 }
 
-.left{
-    margin-left: 40px;
-
-}
-.center{
-    margin-left: 170px;
-}
-
-.rigth{
-    margin-left: 170px;
+.video_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 10% 0 10%;
+    gap: 15px;
 }
 
-.video_wrapper_text_background{
-    color: rgba(43, 36, 36, 0.149);
-    font-size: 230px;
-    display: inline;
-    position: absolute;
-    font-weight: bolder;
-    display: block;
-    margin-left: 250px;
-    overflow: hidden;
-    margin-top: 20px;
-}
 
 /* Inicio estilo footer */
-
-.footer{
-    display: block;
-    padding-top: 50px;
-    width: 100%;
-    font-size: 1,5rem;
-    font-weight: 300;
+.footer {
+    display: grid;
+    grid-template-areas:
+        ". marca ."
+        "datos marca redes"
+        ". marca .";
+    justify-content: space-around;
 }
 
-.footer_contact{
-display: inline-block;
-margin-left: 40px;
-width: 30%;
-margin-right: 184px;
+.footer_contact {
+    grid-area: datos;
 }
 
 
-.footer_redes{
-    display: inline-block;
-    margin-left: 600px;
+.footer_redes {
+    grid-area: redes;
 }
 
-.footer_face{
+.marca {
+    grid-area: marca;
+}
+
+.footer_face {
     margin-left: 10px;
 }
 
-.footer_youtube{
+.footer_youtube {
     margin-left: 10px;
 }
 
-.footer_face{
-    margin-left:10px;
+.footer_face {
+    margin-left: 10px;
 }
 
-/* fin estilo index */
+/* fin estilos footer */
+}
+
