@@ -25,95 +25,81 @@ a {
     right: 20px;
 }
 
-
-@media (min-width:992px) {   
-    .fixed {
-        position: fixed;
-        bottom: 40px;
-        right: 40px;
-    }
-/* Estilos menu navegacion */
 .main_header {
-    display: grid;
+    display: flex;
     width: 100vw;
-    height: 55px;
-    position: fixed;
-    grid-template-columns: 200px auto;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     background-color: rgb(240, 248, 255);
+    flex-direction: column;
 }
 
 .main_header_nav {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    justify-content: end;
-    gap: 0 20px;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px;
+}
+
+.main_header_nav li {
+    padding-left: 20px;
 }
 
 .main_header_nav a {
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: 500;
 }
 
-.main_header_nav a:hover {
-    background-color: black;
-    border-radius: 15px;
-    color: white;
-    padding: 5px 5px;
+.main_header_nav a :active {
+    color: rgba(128, 128, 128, 0.851);
 }
 
-/* Inicio estilos index */
+/* estilos index mobile first */
 .main_principal_parallax {
-    background-image: url(../Imagenes/imagenContPrinc.png);
+    background-image: url(../Imagenes/fondo_mobile.png);
     height: 100vh;
-    background-attachment: fixed;
+    width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-content: space-around;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .main_principal_textbackground {
-    color: rgba(255, 255, 255, 0.108);
-    font-size: 230px;
+    color: rgba(255, 255, 255, 0.238);
+    font-size: 150px;
+    word-break:break-all;
     position: absolute;
     bottom: -104px;
     font-weight: bolder;
+    z-index: 1;
 }
 
 .main_principal_wrapper {
     padding-left: 3%;
+    padding-bottom: 319px;
 }
 
 .main_principal_wrapper h1 {
     color: rgb(255, 255, 255);
-    font-size: 30px;
+    font-size: 0.8em;
 
 }
 
 .main_principal_wrapper_paragrap {
     font: bold;
     color: rgb(255, 255, 255);
-    font-size: 80px;
+    font-size: 2.3em;
     width: 80%;
-
-}
-
-.main_principal_wrapper-cta {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
 }
 
 .main_principal_wrapper-cta a {
-    font-size: 13px;
-    padding: 15px 20px;
+    font-size: 10px;
+    padding: 10px 10px;
     font-weight: 500;
     text-align: center;
     color: white;
@@ -121,299 +107,382 @@ a {
     border-radius: 45px;
 }
 
-.main_principal_wrapper-cta a:hover {
-    color: black;
-    background-color: rgb(255, 8, 37);
+
+/* Inicio stylos index min-width 992px */
+@media (min-width:992px) {
+    .fixed {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+    }
+
+    /* Estilos menu navegacion */
+    .main_header {
+        display: grid;
+        width: 100vw;
+        height: 55px;
+        position: fixed;
+        grid-template-columns: 200px auto;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgb(240, 248, 255);
+    }
+
+    .main_header_nav {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        justify-content: end;
+        gap: 0 20px;
+        text-align: center;
+    }
+
+
+
+    .main_header_nav a:hover {
+        background-color: black;
+        border-radius: 15px;
+        color: white;
+        padding: 5px 5px;
+    }
+
+    /* Inicio estilos index */
+
+
+    .main_principal_parallax {
+        background-image: url(../Imagenes/imagenContPrinc.png);
+        background-attachment: fixed;
+        flex-direction: column;
+    }
+
+    .main_principal_textbackground {
+        color: rgba(255, 255, 255, 0.108);
+        font-size: 230px;
+    }
+
+    
+
+    .main_principal_wrapper h1 {
+        color: rgb(255, 255, 255);
+        font-size: 30px;
+
+    }
+
+    .main_principal_wrapper_paragrap {
+        font: bold;
+        color: rgb(255, 255, 255);
+        font-size: 80px;
+        width: 80%;
+
+    }
+
+    .main_principal_wrapper-cta {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .main_principal_wrapper-cta a {
+        font-size: 13px;
+        padding: 15px 20px;
+        font-weight: 500;
+        text-align: center;
+        color: white;
+        background-color: rgb(255, 43, 67);
+        border-radius: 45px;
+    }
+
+    .main_principal_wrapper-cta a:hover {
+        color: black;
+        background-color: rgb(255, 8, 37);
+    }
+
+    /* Estilos acerca de nosotros */
+
+    .nosotros {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 25px;
+    }
+
+    .nosotros>h2 {
+        font-size: 70px;
+        color: rgba(21, 16, 111, 0.499);
+    }
+
+
+
+    .nosotros_wrapper_escuela {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.5fr 1fr;
+        justify-content: space-around;
+        align-items: center;
+        justify-items: center;
+        gap: 20px;
+        margin: 10px 10px 10px 40px;
+
+    }
+
+    .nosotros_subtitle_escuela {
+        font-size: 40px;
+        font-weight: 300;
+        color: rgba(21, 16, 111, 0.499);
+    }
+
+    .nosotros_paragraph_escuela {
+        font-size: 20px;
+        text-align: justify;
+        font-weight: 300;
+        width: 100%;
+    }
+
+    .img_schooltwo {
+        width: 100%;
+        height: 100%;
+        border-bottom-left-radius: 50px;
+        border-top-right-radius: 50px;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+
+    }
+
+    .nosotros_wrapper_instalaciones {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.5fr 1fr;
+        justify-content: space-around;
+        align-items: center;
+        justify-items: center;
+        gap: 20px;
+        margin: 10px 10px 10px 40px;
+    }
+
+    .nosotros_subtitle_instalaciones {
+        font-size: 40px;
+        font-weight: 300;
+        color: rgba(21, 16, 111, 0.499);
+    }
+
+    .nosotros_paragraph_instalaciones {
+        font-size: 20px;
+        text-align: justify;
+        font-weight: 300;
+        width: 80%;
+    }
+
+    .img_instalaciones {
+        width: 100%;
+        height: 100%;
+        border-bottom-right-radius: 50px;
+        border-top-left-radius: 50px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    /* Inicio estilo seccion saltos */
+    .salto {
+        display: grid;
+        grid-template-areas:
+            "encabezado encabezado encabezado"
+            ". cont ."
+            "buttom . .";
+        gap: 15px;
+    }
+
+    .salto_parallax {
+        background-image: url(../imagenes/saltosparallax.jpg);
+        height: 400px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: grid;
+        grid-template-columns: 3% 50% 50%;
+        grid-template-rows: 3% 50% 50%;
+        align-items: center;
+        grid-area: encabezado;
+    }
+
+    .salto_parallax_title {
+        font-size: 6rem;
+
+        color: rgba(21, 16, 111, 0.499);
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+
+    .salto_wrapper_paragraph {
+        background-color: rgba(100, 148, 237, 0.34);
+        font-weight: 100;
+        font-size: 1rem;
+        padding: 47px 60px;
+        grid-area: cont;
+    }
+
+    .salto_wrapper_cta {
+        text-decoration: none;
+        grid-area: buttom;
+    }
+
+    .salto_wrapper_cta a {
+        font-size: 13px;
+        padding-top: 13px;
+        font-weight: 500;
+        display: inline-block;
+        width: 15%;
+        height: 30px;
+        text-align: center;
+        color: white;
+        background-color: rgb(255, 43, 67);
+        border-radius: 45px;
+        margin-left: 70px;
+        margin-top: 25px;
+    }
+
+    .salto_wrapper_cta a:hover {
+        color: rgb(255, 43, 67);
+        background-color: white;
+
+    }
+
+    /* inicia estilo seccion curso */
+
+
+    .curso {
+        display: grid;
+        grid-template-areas:
+            "presentacion presentacion presentacion"
+            ". articulo ."
+            "boton . .";
+        gap: 15px;
+    }
+
+    .curso_parallax {
+        background-image: url(../imagenes/saltosseccion.jpeg);
+        height: 400px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: grid;
+        grid-template-columns: 3% 50% 50%;
+        grid-template-rows: 3% 50% 50%;
+        align-items: center;
+        grid-area: presentacion;
+    }
+
+    .curso_parallax_title {
+        font-size: 6em;
+        color: rgba(255, 255, 255, 0.541);
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+
+    .curso_wrapper {
+        background-color: rgba(100, 148, 237, 0.34);
+        text-align: 20px;
+        font-weight: 100;
+        padding: 47px 60px;
+        grid-area: articulo;
+    }
+
+
+    .curso_wrapper_cta {
+        text-decoration: none;
+        grid-area: boton;
+    }
+
+    .curso_wrapper_cta a {
+        font-size: 13px;
+        padding-top: 13px;
+        font-weight: 500;
+        width: 20%;
+        height: 30px;
+        text-align: center;
+        color: white;
+        background-color: rgb(255, 43, 67);
+        border-radius: 45px;
+        margin-left: 70px;
+        margin-top: 25px;
+    }
+
+    .curso_wrapper_cta a:hover {
+        color: rgb(255, 43, 67);
+        background-color: white;
+    }
+
+    /* Estilos videos */
+
+
+    .videos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        justify-items: center;
+        gap: 20px;
+    }
+
+    .videos h2 {
+        font-size: 70px;
+        color: rgba(21, 16, 111, 0.499);
+    }
+
+    .video_wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 0 10% 0 10%;
+        gap: 15px;
+    }
+
+
+    /* Inicio estilo footer */
+    .footer {
+        display: grid;
+        grid-template-areas:
+            ". marca ."
+            "datos marca redes"
+            ". marca .";
+        justify-content: space-around;
+    }
+
+    .footer_contact {
+        grid-area: datos;
+    }
+
+
+    .footer_redes {
+        grid-area: redes;
+    }
+
+    .marca {
+        grid-area: marca;
+    }
+
+    .footer_face {
+        margin-left: 10px;
+    }
+
+    .footer_youtube {
+        margin-left: 10px;
+    }
+
+    .footer_face {
+        margin-left: 10px;
+    }
+
+    /* fin estilos footer */
 }
-
-/* Estilos acerca de nosotros */
-
-.nosotros {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    margin-bottom: 25px;
-}
-
-.nosotros>h2 {
-    font-size: 70px;
-    color: rgba(21, 16, 111, 0.499);
-}
-
-
-
-.nosotros_wrapper_escuela {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.5fr 1fr;
-    justify-content: space-around;
-    align-items: center;
-    justify-items: center;
-    gap: 20px;
-    margin: 10px 10px 10px 40px;
-
-}
-
-.nosotros_subtitle_escuela {
-    font-size: 40px;
-    font-weight: 300;
-    color: rgba(21, 16, 111, 0.499);
-}
-
-.nosotros_paragraph_escuela {
-    font-size: 20px;
-    text-align: justify;
-    font-weight: 300;
-    width: 100%;
-}
-
-.img_schooltwo {
-    width: 100%;
-    height: 100%;
-    border-bottom-left-radius: 50px;
-    border-top-right-radius: 50px;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
-
-}
-
-.nosotros_wrapper_instalaciones {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.5fr 1fr;
-    justify-content: space-around;
-    align-items: center;
-    justify-items: center;
-    gap: 20px;
-    margin: 10px 10px 10px 40px;
-}
-
-.nosotros_subtitle_instalaciones {
-    font-size: 40px;
-    font-weight: 300;
-    color: rgba(21, 16, 111, 0.499);
-}
-
-.nosotros_paragraph_instalaciones {
-    font-size: 20px;
-    text-align: justify;
-    font-weight: 300;
-    width: 80%;
-}
-
-.img_instalaciones {
-    width: 100%;
-    height: 100%;
-    border-bottom-right-radius: 50px;
-    border-top-left-radius: 50px;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 3;
-}
-
-/* Inicio estilo seccion saltos */
-.salto {
-    display: grid;
-    grid-template-areas:
-        "encabezado encabezado encabezado"
-        ". cont ."
-        "buttom . .";
-    gap: 15px;
-}
-
-.salto_parallax {
-    background-image: url(../imagenes/saltosparallax.jpg);
-    height: 400px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: grid;
-    grid-template-columns: 3% 50% 50%;
-    grid-template-rows: 3% 50% 50%;
-    align-items: center;
-    grid-area: encabezado;
-}
-
-.salto_parallax_title {
-    font-size: 6rem;
-
-    color: rgba(21, 16, 111, 0.499);
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 4;
-}
-
-.salto_wrapper_paragraph {
-    background-color: rgba(100, 148, 237, 0.34);
-    font-weight: 100;
-    font-size: 1rem;
-    padding: 47px 60px;
-    grid-area: cont;
-}
-
-.salto_wrapper_cta {
-    text-decoration: none;
-    grid-area: buttom;
-}
-
-.salto_wrapper_cta a {
-    font-size: 13px;
-    padding-top: 13px;
-    font-weight: 500;
-    display: inline-block;
-    width: 15%;
-    height: 30px;
-    text-align: center;
-    color: white;
-    background-color: rgb(255, 43, 67);
-    border-radius: 45px;
-    margin-left: 70px;
-    margin-top: 25px;
-}
-
-.salto_wrapper_cta a:hover {
-    color: rgb(255, 43, 67);
-    background-color: white;
-
-}
-
-/* inicia estilo seccion curso */
-
-
-.curso {
-    display: grid;
-    grid-template-areas:
-        "presentacion presentacion presentacion"
-        ". articulo ."
-        "boton . .";
-    gap: 15px;
-}
-
-.curso_parallax {
-    background-image: url(../imagenes/saltosseccion.jpeg);
-    height: 400px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: grid;
-    grid-template-columns: 3% 50% 50%;
-    grid-template-rows: 3% 50% 50%;
-    align-items: center;
-    grid-area: presentacion;
-}
-
-.curso_parallax_title {
-    font-size: 6em;
-    color: rgba(255, 255, 255, 0.541);
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 4;
-}
-
-.curso_wrapper {
-    background-color: rgba(100, 148, 237, 0.34);
-    text-align: 20px;
-    font-weight: 100;
-    padding: 47px 60px;
-    grid-area: articulo;
-}
-
-
-.curso_wrapper_cta {
-    text-decoration: none;
-    grid-area: boton;
-}
-
-.curso_wrapper_cta a {
-    font-size: 13px;
-    padding-top: 13px;
-    font-weight: 500;
-    width: 20%;
-    height: 30px;
-    text-align: center;
-    color: white;
-    background-color: rgb(255, 43, 67);
-    border-radius: 45px;
-    margin-left: 70px;
-    margin-top: 25px;
-}
-
-.curso_wrapper_cta a:hover {
-    color: rgb(255, 43, 67);
-    background-color: white;
-}
-
-/* Estilos videos */
-
-
-.videos {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    justify-items: center;
-    gap: 20px;
-}
-
-.videos h2 {
-    font-size: 70px;
-    color: rgba(21, 16, 111, 0.499);
-}
-
-.video_wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 0 10% 0 10%;
-    gap: 15px;
-}
-
-
-/* Inicio estilo footer */
-.footer {
-    display: grid;
-    grid-template-areas:
-        ". marca ."
-        "datos marca redes"
-        ". marca .";
-    justify-content: space-around;
-}
-
-.footer_contact {
-    grid-area: datos;
-}
-
-
-.footer_redes {
-    grid-area: redes;
-}
-
-.marca {
-    grid-area: marca;
-}
-
-.footer_face {
-    margin-left: 10px;
-}
-
-.footer_youtube {
-    margin-left: 10px;
-}
-
-.footer_face {
-    margin-left: 10px;
-}
-
-/* fin estilos footer */
-}
-
