@@ -179,18 +179,18 @@ a {
 }
 
 /* Inicio seccion salto */
-.salto_parallax{
-background-image: url(../imagenes/saltosparallax.jpg);
-height: 100vh;
-width: 100%;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-display: flex;
-flex-direction: row;
-align-content: flex-end;
-justify-content: flex-start;
-flex-wrap: wrap;
+.salto_parallax {
+    background-image: url(../imagenes/saltosparallax.jpg);
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .salto_parallax_title {
@@ -279,7 +279,7 @@ flex-wrap: wrap;
     justify-content: flex-start;
     justify-items: flex-start;
     align-items: flex-start;
-    
+
 }
 
 .curso_wrapper_cta a {
@@ -290,22 +290,24 @@ flex-wrap: wrap;
     background-color: rgb(255, 43, 67);
     border-radius: 45px;
 }
+
 /* Inicio videos*/
-.videos{
-    display:flex;
+.videos {
+    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
     justify-items: center;
     align-items: center;
 }
-.videos h2{
+
+.videos h2 {
     font-size: 70px;
     padding-left: 30px;
     padding-bottom: 59px;
 }
 
-.video_wrapper{
+.video_wrapper {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -313,8 +315,35 @@ flex-wrap: wrap;
     justify-content: space-around;
 }
 
-iframe{
+iframe {
     padding: 5px 0;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+
+.footer_redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    padding: 5px 5px;
+}
+/* Estilos promociones */
+.promociones_main_principal{
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 
@@ -336,6 +365,7 @@ iframe{
         justify-content: space-around;
         align-items: center;
         background-color: rgb(240, 248, 255);
+        z-index: 1;
     }
 
     .main_header_nav {
@@ -638,12 +668,12 @@ iframe{
         justify-items: center;
         gap: 20px;
     }
-    
+
     .videos h2 {
         font-size: 70px;
         color: rgba(21, 16, 111, 0.499);
     }
-    
+
     .video_wrapper {
         display: flex;
         flex-direction: row;
@@ -690,4 +720,78 @@ iframe{
     }
 
     /* fin estilos footer */
+
+/* Inicio estilos promociones */
+
+#promociones{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+}
+
+
+.promociones_main_principal {
+    background-image: url(../Imagenes/promocionesfondo.png);
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr)
+}
+
+.imagen{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.ilustracion_promociones {
+    width: 900px;
+    
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count: none;
+    animation-direction: alternate;
+    z-index: 0;
+}
+
+@keyframes slidein {
+    from {
+        margin-top: 0%;
+        width: 300%
+    }
+
+    to {
+        margin-bottom: 50%;
+        width: 91%;
+        
+    }
+}
+
+.promociones_main_principal h1, h2{
+    color: black;
+}
+.promociones_main_principal h1 {
+    font-size: 5em;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding-left: 15px;
+}
+
+.promociones_main_principal h2 {
+    font-size: 3em;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding-left: 15px;
+}
+.tarifas{
+    position: relative;
+    z-index: -1;
+}
 }
