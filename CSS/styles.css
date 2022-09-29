@@ -67,12 +67,13 @@ a {
     align-content: space-around;
     justify-content: center;
     flex-wrap: wrap;
+
 }
 
 .main_principal_textbackground {
     color: rgba(255, 255, 255, 0.238);
     font-size: 150px;
-    word-break:break-all;
+    word-break: break-all;
     position: absolute;
     bottom: -104px;
     font-weight: bolder;
@@ -107,6 +108,215 @@ a {
     border-radius: 45px;
 }
 
+/* inicio seccion nosotros */
+.nosotros {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nosotros>h2 {
+    font-size: 50px;
+    color: rgba(21, 16, 111, 0.499);
+    text-align: center;
+    padding-top: 15px;
+}
+
+.nosotros_wrapper_escuela {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 15px 15px 20px;
+
+}
+
+.nosotros_subtitle_escuela {
+    font-size: 35px;
+    font-weight: 300;
+    color: rgba(21, 16, 111, 0.499);
+    padding-left: 20px;
+}
+
+.nosotros_paragraph_escuela {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: justify;
+    padding: 15px 5px 20px;
+}
+
+.img_schooltwo {
+    width: 100%;
+
+}
+
+.nosotros_wrapper_instalaciones {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 15px 15px 20px;
+}
+
+.nosotros_subtitle_instalaciones {
+    font-size: 35px;
+    font-weight: 300;
+    color: rgba(21, 16, 111, 0.499);
+    padding-left: 20px;
+}
+
+.nosotros_paragraph_instalaciones {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: justify;
+    padding: 15px 5px 20px;
+}
+
+.img_instalaciones {
+    width: 100%;
+}
+
+/* Inicio seccion salto */
+.salto_parallax{
+background-image: url(../imagenes/saltosparallax.jpg);
+height: 100vh;
+width: 100%;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+display: flex;
+flex-direction: row;
+align-content: flex-end;
+justify-content: flex-start;
+flex-wrap: wrap;
+}
+
+.salto_parallax_title {
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    width: 75%;
+    padding-left: 30px;
+    padding-bottom: 59px;
+}
+
+.salto_wrapper_paragraph>p:first-child {
+    font-size: 25px;
+    text-align: center;
+    font-weight: 400;
+    padding: 20px 15px 10px;
+}
+
+.salto_wrapper_paragraph p {
+    font-size: 20px;
+    text-align: justify;
+    padding: 0 20px 2px;
+}
+
+.salto_wrapper_cta {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px 0 25px 15px;
+}
+
+.salto_wrapper_cta a {
+    font-size: 10px;
+    padding: 10px 10px;
+    font-weight: 500;
+    text-align: center;
+    color: white;
+    background-color: rgb(255, 43, 67);
+    border-radius: 45px;
+}
+
+/* Inicio estilos seccion cursos */
+.curso {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+}
+
+.curso_parallax {
+    background-image: url(../imagenes/saltosseccion.jpeg);
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.curso_parallax_title {
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    width: 75%;
+    padding-left: 10px;
+    padding-bottom: 59px;
+}
+
+.curso_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    justify-items: center;
+    align-items: baseline;
+    font-size: 15px;
+    text-align: justify;
+    padding: 15px 20px;
+}
+
+
+.curso_wrapper_cta {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    justify-items: flex-start;
+    align-items: flex-start;
+    
+}
+
+.curso_wrapper_cta a {
+    font-size: 10px;
+    font-weight: 500;
+    text-align: center;
+    color: white;
+    background-color: rgb(255, 43, 67);
+    border-radius: 45px;
+}
+/* Inicio videos*/
+.videos{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+}
+.videos h2{
+    font-size: 70px;
+    padding-left: 30px;
+    padding-bottom: 59px;
+}
+
+.video_wrapper{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+iframe{
+    padding: 5px 0;
+}
+
 
 /* Inicio stylos index min-width 992px */
 @media (min-width:992px) {
@@ -136,8 +346,6 @@ a {
         text-align: center;
     }
 
-
-
     .main_header_nav a:hover {
         background-color: black;
         border-radius: 15px;
@@ -151,7 +359,12 @@ a {
     .main_principal_parallax {
         background-image: url(../Imagenes/imagenContPrinc.png);
         background-attachment: fixed;
+        display: flex;
         flex-direction: column;
+        align-content: flex-start;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
     .main_principal_textbackground {
@@ -159,7 +372,10 @@ a {
         font-size: 230px;
     }
 
-    
+    .main_principal_wrapper {
+        padding-left: 3%;
+        padding-bottom: 0;
+    }
 
     .main_principal_wrapper h1 {
         color: rgb(255, 255, 255);
@@ -199,9 +415,7 @@ a {
     /* Estilos acerca de nosotros */
 
     .nosotros {
-        display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
         align-items: center;
         justify-content: space-around;
         margin-bottom: 25px;
@@ -209,10 +423,7 @@ a {
 
     .nosotros>h2 {
         font-size: 70px;
-        color: rgba(21, 16, 111, 0.499);
     }
-
-
 
     .nosotros_wrapper_escuela {
         display: grid;
@@ -229,18 +440,14 @@ a {
     .nosotros_subtitle_escuela {
         font-size: 40px;
         font-weight: 300;
-        color: rgba(21, 16, 111, 0.499);
     }
 
     .nosotros_paragraph_escuela {
         font-size: 20px;
-        text-align: justify;
-        font-weight: 300;
         width: 100%;
     }
 
     .img_schooltwo {
-        width: 100%;
         height: 100%;
         border-bottom-left-radius: 50px;
         border-top-right-radius: 50px;
@@ -264,19 +471,14 @@ a {
 
     .nosotros_subtitle_instalaciones {
         font-size: 40px;
-        font-weight: 300;
-        color: rgba(21, 16, 111, 0.499);
     }
 
     .nosotros_paragraph_instalaciones {
-        font-size: 20px;
-        text-align: justify;
         font-weight: 300;
         width: 80%;
     }
 
     .img_instalaciones {
-        width: 100%;
         height: 100%;
         border-bottom-right-radius: 50px;
         border-top-left-radius: 50px;
@@ -312,13 +514,13 @@ a {
 
     .salto_parallax_title {
         font-size: 6rem;
-
         color: rgba(21, 16, 111, 0.499);
         grid-column-start: 2;
         grid-column-end: 3;
         grid-row-start: 2;
         grid-row-end: 4;
     }
+
 
     .salto_wrapper_paragraph {
         background-color: rgba(100, 148, 237, 0.34);
@@ -328,17 +530,18 @@ a {
         grid-area: cont;
     }
 
+
     .salto_wrapper_cta {
         text-decoration: none;
         grid-area: buttom;
+        display: flex;
+        align-items: flex-start;
     }
 
     .salto_wrapper_cta a {
         font-size: 13px;
         padding-top: 13px;
         font-weight: 500;
-        display: inline-block;
-        width: 15%;
         height: 30px;
         text-align: center;
         color: white;
@@ -401,15 +604,17 @@ a {
     .curso_wrapper_cta {
         text-decoration: none;
         grid-area: boton;
+        display: flex;
+        flex-direction: row;
     }
 
     .curso_wrapper_cta a {
         font-size: 13px;
         padding-top: 13px;
         font-weight: 500;
-        width: 20%;
         height: 30px;
         text-align: center;
+        align-content: flex-start;
         color: white;
         background-color: rgb(255, 43, 67);
         border-radius: 45px;
@@ -427,18 +632,18 @@ a {
 
     .videos {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-around;
         justify-items: center;
         gap: 20px;
     }
-
+    
     .videos h2 {
         font-size: 70px;
         color: rgba(21, 16, 111, 0.499);
     }
-
+    
     .video_wrapper {
         display: flex;
         flex-direction: row;
